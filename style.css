@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000; /* fondo negro */
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Fuente futurista */
+  }
+  
+  canvas {
+    display: block;
+  }
+  
+  /* Contenedor del reloj */
+  #info-hora {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8vw; /* Tamaño escalable según el ancho de la pantalla */
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    z-index: 10;
+    animation: pulso 2s infinite;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: rgba(0, 255, 255, 0.05); /* fondo de brillo */
+    backdrop-filter: blur(5px); /* efecto esmerilado */
+    border: 1px solid rgba(0, 255, 255, 0.3); /* borde Tron */
+  }
+  
+  /* Animación de pulso */
+  @keyframes pulso {
+    0%, 100% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.1);
+    }
+  }
+  
